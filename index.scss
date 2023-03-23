@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$btn-active: hsl(245, 83%, 68%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$dark-blue: hsl(223, 47%, 23%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$desktop: 375px;
+
+body {
+  font-family: "Red Hat Display", serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.title {
+  font-weight: 900;
+  color: $dark-blue;
+}
+
+.bold {
+  font-weight: 700;
+  color: $dark-blue;
+}
+
+.text {
+  font-weight: 500;
+  color: $desaturated-blue;
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-color: $pale-blue;
+  height: 100vh;
+  width: 100vw;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url('images/pattern-background-desktop.svg');
+  }
+}
+
+.image {
+  max-width: 100%;
+}
+
+.card {
+  max-width: 330px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 410px;
+  }
+}
+
+.content {
+  padding: 20px 30px 40px;
+  text-align: center;
+  background-color: white;
+
+  &__text {
+    margin: 0 auto 20px;
+    max-width: 270px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 20px 40px 40px;
+  }
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: $very-pale-blue;
+
+  border-radius: 15px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 20px;
+  }
+
+  &__cta {
+    margin-left: auto;
+  }
+}
+
+.btn-primary {
+  all: unset;
+  border-radius: 12px;
+
+  width: 100%;
+  background-color: $bright-blue;
+  color: white;
+
+  padding: 15px 0;
+  font-weight: 900;
+
+  box-shadow: 0 15px 10px 5px $pale-blue;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $btn-active;
+  }
+
+  margin-bottom: 30px;
+}
+
+.btn-secondary {
+  all: unset;
+  color: $desaturated-blue;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    color: $dark-blue;
+  }
+}
+
+.link {
+  color: $bright-blue;
+
+  &:hover {
+    color: $btn-active;
+  }
+}

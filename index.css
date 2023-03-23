@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+body {
+  font-family: "Red Hat Display", serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.title {
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+
+.bold {
+  font-weight: 700;
+  color: hsl(223, 47%, 23%);
+}
+
+.text {
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: hsl(225, 100%, 94%);
+  height: 100vh;
+  width: 100vw;
+}
+@media screen and (min-width: 375px) {
+  .container {
+    background-image: url("images/pattern-background-desktop.svg");
+  }
+}
+
+.image {
+  max-width: 100%;
+}
+
+.card {
+  max-width: 330px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 375px) {
+  .card {
+    max-width: 410px;
+  }
+}
+
+.content {
+  padding: 20px 30px 40px;
+  text-align: center;
+  background-color: white;
+}
+.content__text {
+  margin: 0 auto 20px;
+  max-width: 270px;
+}
+@media screen and (min-width: 375px) {
+  .content {
+    padding: 20px 40px 40px;
+  }
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 15px;
+}
+.plan__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.plan__cta {
+  margin-left: auto;
+}
+
+.btn-primary {
+  all: unset;
+  border-radius: 12px;
+  width: 100%;
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  padding: 15px 0;
+  font-weight: 900;
+  box-shadow: 0 15px 10px 5px hsl(225, 100%, 94%);
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.btn-primary:hover {
+  background-color: hsl(245, 83%, 68%);
+}
+
+.btn-secondary {
+  all: unset;
+  color: hsl(224, 23%, 55%);
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+.link {
+  color: hsl(245, 75%, 52%);
+}
+.link:hover {
+  color: hsl(245, 83%, 68%);
+}
+
+/*# sourceMappingURL=index.css.map */
